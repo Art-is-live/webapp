@@ -1,0 +1,14 @@
+// ==============================================
+// LINKS
+// ==============================================
+
+$link-color-white:              $c-white;
+$link-color-black:              $c-black;
+
+.header-nav__link {
+    color: $link-color-white;
+}
+
+.footer-nav__link {
+    color: $link-color-black;
+}

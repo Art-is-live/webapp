@@ -1,0 +1,71 @@
+// ==============================================
+// RESPONSIVE MOBILE FIRST
+// ==============================================
+
+@media only screen and  (min-width:768px) {
+    #content {
+      padding: 4rem 5rem 1rem;
+    }
+}
+
+@media only screen and  (min-width:768px) {
+    .block-forms {
+      flex-direction: row;
+      width: 80%;
+    }
+}
+
+@media only screen and  (min-width:768px) {
+
+    .block-my-space.active {
+      flex-direction: row;
+      width: 80%;
+    }
+  
+    .block-my-space__profile {
+      width: 30%;
+    }
+    
+    .block-my-space__events {
+      width: 66%;
+    }
+  }
+
+
+
+  @media only screen and  (min-width:768px) {
+
+    .block-events-all.active {
+      flex-direction: row;
+    }
+  
+    .block-events-all__part {
+      width: calc(100%/6);
+    }
+  }
+
+
+
+  @media only screen and  (min-width:768px) {
+
+    .block-users-all.active {
+      flex-direction: row;
+      justify-content: flex-start;
+    }
+  
+    .block-users-all__part {
+      width: calc(100%/6);
+    }
+  
+    .block-users-all.full-page {
+      justify-content: flex-start;
+    }
+  }
+
+
+  @media only screen and  (min-width:768px) {
+
+    .block-my-space-events__actions {
+      flex-direction: row;
+    }
+  }

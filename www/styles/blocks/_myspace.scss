@@ -1,0 +1,32 @@
+/* My Space */
+
+.block-my-space-events__actions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .block-my-space-events__image {
+    border:2px solid #FFFFFF;
+  }
+  
+  .block-my-space__photo img {
+    border-radius: 50%;
+    border: 10px solid #FFFFFF;
+  }
+
+
+
+
+.block-my-space.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .block-my-space__profile {
+    width: 100%;
+  }
+  
+  .block-my-space__events {
+    width: 100%;
+  }

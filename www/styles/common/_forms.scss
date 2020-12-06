@@ -1,0 +1,42 @@
+// ==============================================
+// FORMS
+// ==============================================
+
+.block-forms{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 10px auto;
+    padding: 16px;
+    width: 100%; 
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 4px;
+}
+  
+.block-forms button {
+    border-radius: 20px;
+}
+
+
+.block-forms__login button, .block-forms__register button {
+    background-color: red;
+    color: #FFFFFF;
+}
+
+.block-forms__register, .block-forms__login {
+    padding: 4px;
+}
+
+.block-forms__register {
+    width: 50%;
+}
+
+.block-forms__login{
+    width: 40%;
+}
+
+.block-forms--red{
+    color: red;
+}
+

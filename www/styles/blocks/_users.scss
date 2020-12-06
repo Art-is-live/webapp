@@ -1,0 +1,28 @@
+
+/* Block users home*/
+
+.block-users-all.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-height: 30vh;
+    overflow: hidden;
+  }
+  
+  .block-users-all__part {
+    display: block;
+    width: 30%;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .block-users-all__image {
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .block-users-all.full-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }

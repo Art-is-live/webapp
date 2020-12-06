@@ -1,0 +1,293 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+  <head>
+  	<title>Art is Live</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/favicon.jpg" type="image/jpg" sizes="16x16">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <!-- Service workers (in progress) -->
+    <!-- Header (+ Search bar in progress) -->
+    <header>
+      <button id="home" class="logo home" ><h1>Art is Live</h1></button>
+      <div class="topbar-search">
+        <form action="#" id="searchForm">
+          <label for="searchData">Your search...</label>
+          <input type="text" name="searchData" id="searchData" minlength="1" required placeholder="Search...">
+          <button type="submit" class="is-disable"><i class="fas fa-search"></i></button>
+        </form>
+    </div>
+    </header>	
+    <!-- Web app -->
+		<div class="web_app" id="app">
+      <!-- Sidebar left with toggle menu -->
+      <div class="sidebar-left">
+        <nav id="sidebar">
+          <div class="custom-menu">
+            <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i>
+              <span class="sr-only">Toggle Menu</span>
+            </button>
+          </div>
+          <!-- Menu -->
+          <div id="sidebar-actions">
+            <div class="sidebar-action">
+              <button id="sibebar-register" class="" type="button">Register</button>
+            </div>
+            <div class="sidebar-action">
+              <button id="sibebar-log-in" class="" type="button">Login</button>
+            </div>
+            <div class="sidebar-action">
+              <button id="sibebar-log-out" class="hidden" type="button">Logout</button>
+            </div>
+            <div class="sidebar-action">
+              <button type="button" id="sidebar-events" class="hidden">ALl events</button>
+            </div>
+            <div class="sidebar-action">
+              <button type="button" id="sidebar-users" class="hidden">All artists</button>
+            </div>
+            <div class="sidebar-action">
+              <button id="sibebar-my-space" class="hidden" type="button">My space</button>
+            </div>
+            <div class="sidebar-myspace-dropdown hidden">
+              <div class="sidebar-action">
+                <button id="sibebar-create-event" class="" type="button">Create event</button>
+              </div>
+              <div class="sidebar-action">
+                <button id="sidebar-edit-profil" class="" type="button">Edit my profile</button>
+              </div>
+            </div>
+          </div>
+        </nav>  
+		  </div>
+
+        <!-- Page Content  -->
+      <div id="content">
+        <!-- User Forms -->
+        <div class="block-forms block-forms--user" id="forms-user">
+          <form action="#" method="POST" id="registerFormUser" class="block-forms__register ">
+            <h2 class="block-forms__title-register">Create your user profil</h2>
+            <label for="userFname">First Name / Group name *</label>
+            <input id="userFname" type="text" name="userFname" required minlength="3" placeholder="Your first name">
+            <label for="userLname">Last Name </label>
+            <input id="userLname" type="text" name="userLname" placeholder="Your last name">
+            <label class="block-forms__description">Gender *</label>
+            <div>
+              <input type="radio" id="userMale" name="gender" value="male">
+              <label for="userMale">Male</label>
+            </div>
+            <div>
+              <input type="radio" id="userFemale" name="gender" value="female">
+              <label for="userFemale">Female</label>
+            </div>
+            <div>
+              <input type="radio" id="userOther" name="gender" value="other">
+              <label for="userOther">Other</label>
+            </div>
+            <div>
+              <label for="userBirthday">Date of birth:</label>
+              <input type="date" id="userBirthday" name="userBirthday">
+            </div>
+            <label for="userEmail">Enter your email: *</label>
+            <input type="email" id="userEmail" name="userEmail">
+            <label for="userPhone">Enter a phone number:</label>
+            <input type="tel" id="userPhone" name="userPhone" placeholder="06-99-88-77-55" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}" required>
+            <small>Format: 0699887755</small>
+            <div>
+              <label for="userPicture">Select image to upload: (200px x 200px) *</label>
+              <input type="file" name="userPicture" id="userPicture">
+            </div>
+            <label for="userBiography">Your biography: *</label>
+            <textarea id="userBiography" name="userBiography" rows="4" cols="50" placeholder="Your biography">
+            </textarea>
+            <label for="userPassword">Password: *</label>
+            <input type="password" id="userPassword" name="userPassword">
+            <button type="submit" aria-label="Left Align">Register</button>
+          </form>
+          <form action="#" method="POST" id="loginFormUser" class="block-forms__login">
+            <h2 class="block-forms__title-login">Or login to AIL</h2>
+            <label for="userEmailLogin">Email *</label>
+            <input id="userEmailLogin" type="text" name="userEmailLogin" required minlength="5" placeholder="Your email">
+            <label for="userPasswordLogin">Password *</label>
+            <input id="userPasswordLogin" type="password" name="userPasswordLogin" required minlength="3" placeholder="Your password">
+            <button type="submit" aria-label="Left Align">Login</button>
+            <p class="error-message login hidden">Username or password incorrect.</p>
+          </form>
+        </div>
+        <!--  Public forms (in progress) -->
+  <!--        
+          <div class="block-forms block-forms--public hidden" id="forms-public">
+            <form action="#" method="POST" id="registerFormPublic" class="block-forms__register">
+                <h2 class="block-forms__title block-forms--red">Create your public profil</h2>
+                <label for="publicFname">First Name *</label>
+                <input id="publicFname" type="text" name="publicFname" required minlength="5" placeholder="Your first name">
+                <label for="publicLname">Last Name *</label>
+                <input id="publicLname" type="text" name="publicLname" required minlength="5" placeholder="Your last name">
+                <p class="block-forms__description">Gender</p>
+                <div>
+                  <input type="radio" id="publicMale" name="gender" value="male">
+                  <label for="publicMale">Male</label>
+                </div>
+                <div>
+                  <input type="radio" id="publicFemale" name="gender" value="female">
+                  <label for="publicFemale">Female</label>
+                </div>
+                <div>
+                  <input type="radio" id="publicOther" name="gender" value="other">
+                  <label for="publicOther">Other</label>
+                </div>
+                <div>
+                  <label for="publicBirthday">Date of birth:</label>
+                  <input type="date" id="publicBirthday" name="publicBirthday">
+                </div>
+                <label for="publicEmail">Enter your email: *</label>
+                <input type="email" id="publicEmail" name="publicEmail">
+                <label for="publicPhone">Enter a phone number:</label>
+                <input type="tel" id="publicPhone" name="publicPhone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required>
+                <small>Format: 123-45-678</small>
+                <div>
+                  <label for="publicPassword">Password: *</label>
+                  <input type="password" id="publicPassword" name="publicPassword">
+                </div>
+                <button type="submit" aria-label="Left Align">Register</button>
+            </form>
+            <form action="#" method="POST" id="loginFormPublic" class="block-forms__login ">
+                <h2 class="block-forms__title block-forms--red">Or login to <span class="logo"><strong>Kebab</strong><b>.tv</b></span></h2>
+                <label for="publicEmailLogin">Email *</label>
+                <input id="publicEmailLogin" type="text" name="publicEmailLogin" required minlength="5" placeholder="Your email">
+                <label for="publicPasswordLogin">Email *</label>
+                <input id="publicPasswordLogin" type="text" name="publicPasswordLogin" required minlength="5" placeholder="Your password">
+                <button type="submit" aria-label="Left Align">Login</button>
+            </form>
+        </div> -->
+
+        <!-- Home page -->
+        <div class="block-content-home">
+          <h2 class="block-content-home__title events hidden">Online shows...</h2>
+          <div class="block-events-all hidden"></div>
+          <h2 class="block-content-home__title users hidden">Artists...</h2>
+          <div class="block-users-all hidden"></div>
+        </div>
+        <!-- My Space User -->
+        <div class="block-my-space hidden">   
+          <div class="block-my-space__profile"></div>
+          <div class="block-my-space__events"></div>
+        </div>
+        <!-- The Modal Create Event (futur back-office) -->
+        <div class="block-modal-event modal" id="creationEvent-modal">
+          <!-- Modal content  -->
+          <div class="block-modal-event__content">
+            <span class="block-modal-event__close">&times;</span>
+            <form action="#" method="POST"  id="block-modal-event__form">
+              <h2 class="block-modal-event__title">Create your event</h2>
+              <label for="eventName">Name *</label>
+              <input id="eventName" type="text" name="eventName" required minlength="4" placeholder="Name's event">
+              <div>
+                <label for="eventDate">Date of event: *</label>
+                <input type="date" id="eventDate" name="eventDate">
+              </div>
+              <div>
+                <label for="eventPicture">Select image to upload: (200px x 70px) *</label>
+                <input type="file" name="eventPicture" id="eventPicture">
+              </div>
+              <label for="eventDescription">Description: *</label>
+              <textarea id="eventDescription" name="eventDescription" rows="4" cols="10" placeholder="Your description">
+              </textarea>
+              <label for="eventURL">Link's Event *</label>
+              <input id="eventURL" type="text" name="eventURL" required minlength="4" placeholder="Link's event">
+              <button type="submit" aria-label="Left Align">Create</button>
+            </form>
+          </div>
+        </div>
+        <!-- The Modal Edition Event (in progress) -->
+<!--         <div class="block-modal-event-edition modal" id="editionEvent-modal">
+ -->          <!-- Modal content  -->
+<!--           <div class="block-modal-event-edition__content">
+            <span class="block-modal-event-edition__close">&times;</span>
+            <form action="#" method="POST"  id="block-modal-event-edition__form">
+              <h2 class="block-modal-event-edition__title">Create your event</h2>
+              <label for="editEventName">Name *</label>
+              <input id="editEventName" type="text" name="editEventName" required minlength="4" placeholder="Name's event">
+              <div>
+                <label for="editEventDate">Date of event: *</label>
+                <input type="date" id="editEventDate" name="editEventDate">
+              </div>
+              <div>
+                <label for="editEventPicture">Select image to upload: (200px x 70px) *</label>
+                <input type="file" name="editEventPicture" id="editEventPicture">
+              </div>
+              <label for="editEventDesc">Description: *</label>
+              <textarea id="editEventDesc" name="editEventDesc" rows="4" cols="10" placeholder="Your description">
+              </textarea>
+              <label for="editEventURL">Link's Event *</label>
+              <input id="editEventURL" type="text" name="editEventURL" required minlength="4" placeholder="Link's event">
+              <button type="submit" aria-label="Left Align">Update</button>
+              <button type="button" aria-label="Left Align">Delete</button>
+            </form>
+          </div> -->
+        <!-- </div> -->
+        <!-- The Modal Edition User (futur back-office) -->
+        <div class="block-modal-edit-user modal" id="editUser-modal">
+          <!-- Modal content -->
+          <div class="block-modal-edit-user__content">
+            <span class="block-modal-edit-user__close">&times;</span>
+            <form action="#" method="PUT" id="block-modal-edit-user__form">
+              <h2 class="block-modal-edit-user__title">Edit your profile</h2>
+              <label for="editFNUser">First Name / Group name *</label>
+              <input id="editFNUser" type="text" name="editFNUser" required minlength="3" placeholder="Your first name / Group name">
+              <label for="editLNUser">Last Name </label>
+              <input id="editLNUser" type="text" name="editLNUser" placeholder="Your last name (optional)">
+              <p class="block-forms__description">Gender *</p>
+              <div>
+                <input type="radio" id="editUMale" name="editGender" value="male">
+                <label for="editUMale">Male</label>
+              </div>
+              <div>
+                <input type="radio" id="editUFemale" name="editGender" value="female">
+                <label for="editUFemale">Female</label>
+              </div>
+              <div>
+                <input type="radio" id="editUOther" name="editGender" value="other">
+                <label for="editUOther">Other</label>
+              </div>
+              <label for="editUMail">Update your email: *</label>
+              <input type="email" id="editUMail" name="editUMail">
+              <label for="editUPhone">Update your phone number:</label>
+              <input type="tel" id="editUPhone" name="editUPhone" placeholder="06-99-88-77-55" pattern="[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}[0-9]{2}">
+              <small>Format: 0699887755</small>
+              <div>
+                <label for="editUPicture">Update your image to upload: (200px x 200px)</label>
+                <input type="file" name="editUPicture" id="editUPicture">
+              </div>
+              <label for="editUBio">Update your biography:</label>
+              <textarea id="editUBio" name="editUBio" rows="4" cols="50" placeholder="Your biography">
+              </textarea>
+              <!-- Compare password (in progress) -->
+              <label for="editUPassword">Password: *</label>
+              <input type="password" id="editUPassword" name="editUPassword">
+              <label for="editUPasswordVerif">Password: </label>
+              <input type="password" id="editUPasswordVerif" name="editUPasswordVerif">
+              <button type="submit" aria-label="Left Align" id="update-account">Update</button>
+              <button type="button" aria-label="Left Align" class="" id="delete-account">Delete Account</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer>
+      <p><img src="img/music.svg">Art Is Live &#169; Julie Salha 2020</p>
+    </footer>
+    <script src="js/app.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="./js/fetch.class.js"></script>
+  </body>
+</html>

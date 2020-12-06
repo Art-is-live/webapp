@@ -1,0 +1,199 @@
+// ==============================================
+// BASE
+// ==============================================
+
+//
+//  Base Markup
+//  _____________________________________________
+
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    font-size: 75%; /* ( / 16pixels de base)*/
+}
+
+body {
+    font-family: $f-base;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1.5;
+    color: $c-base;
+    text-align: left;
+    background-color: #000000;
+}
+
+[tabindex="-1"]:focus {
+    outline: 0 !important; }
+
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: $c-base;
+    text-decoration: underline;
+}
+    
+a:focus, a:hover {
+    color:red;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 0.5rem; 
+}
+  
+h1{
+    font-size: 3rem;
+}
+  
+h2{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+  
+h3, h4, h5, h6 {
+    font-size: 1.5rem;
+}
+  
+p {
+    margin-top: 0;
+    margin-bottom: 1rem; 
+    line-height: 1.5;
+
+}
+  
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem; 
+}
+
+
+ol, ul {
+    list-style: none;
+}
+
+button {
+    font-family: $f-base;
+    border: none;
+    border-image: none;
+}
+
+button {
+    margin: 10px auto;
+    border-radius: 4px; 
+}
+  
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color; 
+}
+
+button {
+    -webkit-transition: .3s all ease;
+    -o-transition: .3s all ease;
+    transition: .3s all ease; }
+    button:hover, button:focus {
+    text-decoration: none !important;
+    outline: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important; 
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+    height: 2.8rem;
+    line-height: 2.8rem;
+    padding: 0 2rem;
+    font-size: 0.8rem;
+}
+
+input[type='email'], input[type='number'], input[type='password'], input[type='search'],
+input[type='tel'], input[type='text'], input[type='url'], textarea, select {
+  height: 2.8rem;
+}
+
+.nav {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none; 
+}
+
+/* Web App */
+
+#app {
+    display: flex;
+  }
+  
+#content {
+    width: 100%;
+    padding: 4rem 1rem 1rem;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s; 
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+//
+//  Content display
+//  _____________________________________________
+
+.hidden {
+    border:      0;
+    display:     block;
+    font-size:   0;
+    height:      0;
+    line-height: 0;
+    margin:      0;
+    overflow:    hidden;
+    padding:     0;
+    width:       0;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap;
+  }
+
+
+  .hidden {
+    display: none;
+  }
+  
+  .is-disable {
+    cursor: not-allowed;
+  }
+  
+  .error-message{
+    color: red;
+  }

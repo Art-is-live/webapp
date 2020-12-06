@@ -1,0 +1,19 @@
+// ==============================================
+// FOOTER
+// ==============================================
+
+
+footer {
+    padding: 10px;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  
+  footer img {
+    position: relative;
+    left: -10px;
+    top: 10px;
+    -webkit-transform: rotate(-10deg); /* Ch <36, Saf 5.1+, iOS < 9.2, An =<4.4.4 */
+    -ms-transform: rotate(-10deg); /* IE 9 */
+    transform: rotate(-10deg); /* IE 10, Fx 16+, Op 12.1+ */
+  }

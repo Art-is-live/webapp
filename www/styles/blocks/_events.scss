@@ -1,0 +1,41 @@
+/* Block events home*/
+
+.block-events-all.active {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    max-height: 32vh;
+    overflow: hidden;
+  }
+  
+  .block-events-all.full-page, .block-users-all.full-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .block-events-all__part {
+    display: block;
+    width: 100%;
+    margin: 10px;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .block-events-all__image, .block-events-all__name, .block-events-all__date, .block-events-all__actions {
+    margin-bottom: 10px;
+  }
+  
+  .block-events-all__name {
+    text-transform: uppercase;
+  }
+  
+  .block-events-all__actions {
+    display: flex;
+  }
+  
+  .block-events-all__actions > div {
+    width: 50%;
+  }
